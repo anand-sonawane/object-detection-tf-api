@@ -35,10 +35,13 @@ Download from https://github.com/tensorflow/models/blob/master/research/object_d
 fine_tune_checkpoint: "models/model.ckpt"
 ```
 <br>
+
 2. Edit the parameter *num_steps* depending upon the size of your dataset and how long you are ready to train the model
 <br>
 <br>
+
 3. Change the *input_path* and *label_map_path*, the input path is the path to your records file and label_map_path is path to your labels file which we have created(You can look for the sample of it in the repo) so it would look like
+
 ``` python
 train_input_reader: {
   tf_record_input_reader {
@@ -57,7 +60,7 @@ eval_input_reader: {
   shuffle: false
   num_readers: 1
 }
-``` 
+```
 <br>
 <br>
 

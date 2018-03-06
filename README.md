@@ -31,6 +31,20 @@ Download from https://github.com/tensorflow/models/blob/master/research/object_d
 <br>
 10.Train the object_detection_model
 
+# Create TF Records <br>
+<br>
+You will need to change the following file paths in TF Records file
+1.Change the path to Annotations folder<br>
+<br>
+2.Change the path to Images folder<br>
+<br>
+3.Create a train.txt file with files names of the Images which you will use during training process<br>
+<br>
+4.Create a val.txt file with files names of the Images which you will use during training process<br>
+<br>
+5.Run the create_tfrecords file <br>
+<br>
+
 # Changes to be done in the config file  <br>
 1. The *fine_tune_checkpoint* path to point to the model.ckpt file. If you followed the above steps it would look like
 ``` python

@@ -26,6 +26,7 @@ protoc object_detection/protos/*.proto --python_out=.
 <br>
 9.Download the pretrained checkpoints and graph of the pretrained classifier you selected and move those 3 files to the models folder  <br>
 Download from https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md <br>
+<br>
 10.Train the object_detection_model
 
 # Changes to be done in the config file  <br>
@@ -35,6 +36,7 @@ fine_tune_checkpoint: "models/model.ckpt"
 ```
 <br>
 2. Edit the parameter *num_steps* depending upon the size of your dataset and how long you are ready to train the model
+<br>
 <br>
 3. Change the *the input_path* and *label_map_path*, the input path is the path to your records file and label_map_path is path to your labels file which we have created(You can look for the sample of it in the repo) so it would look like
 ``` python
@@ -57,14 +59,18 @@ eval_input_reader: {
 }
 ``` 
 <br>
+<br>
 
 # Training  <br>
 
 ``` bash
 python train.py --logtostderr --train_dir=./models/train --pipeline_config_path='path_to_config_file'
 ```
+<br>
+<br>
 
 # Other Optimisations
+<br>
 If you are running out of memory and this is causing training to fail, there are a number of solutions you can try. <br>
 First try adding the arguments
 ``` python

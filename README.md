@@ -73,9 +73,11 @@ python train.py --logtostderr --train_dir=./models/train --pipeline_config_path=
 <br>
 If you are running out of memory and this is causing training to fail, there are a number of solutions you can try. <br>
 First try adding the arguments
+
 ``` python
 batch_queue_capacity: 2
 prefetch_queue_capacity: 2
 ```
+
 to your config file in the train_config section. <br>
 For example, placing the two lines between *gradient_clipping_by_norm* and *fine_tune_checkpoint* will work. The number 2 above should only be starting values to get training to begin. The default for those values are 8 and 10 respectively and increasing those values should help speed up training.

@@ -24,6 +24,8 @@ protoc object_detection/protos/*.proto --python_out=.
 <br>
 8.Modify the config file for the model you selected (place it where my config file is present in folder structure) <br>
 <br>
+9.Create models folder <br>
+<br>
 9.Download the pretrained checkpoints and graph of the pretrained classifier you selected and move those 3 files to the models folder  <br>
 Download from https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md <br>
 <br>

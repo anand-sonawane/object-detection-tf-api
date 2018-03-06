@@ -33,7 +33,8 @@ Download from https://github.com/tensorflow/models/blob/master/research/object_d
 
 # Create TF Records <br>
 <br>
-You will need to change the following file paths in TF Records file
+You will need to change the following file paths in TF Records file <br>
+<br>
 1.Change the path to Annotations folder<br>
 <br>
 2.Change the path to Images folder<br>

@@ -89,6 +89,19 @@ python train.py --logtostderr --train_dir=./models/train --pipeline_config_path=
 <br>
 <br>
 
+
+# Eval  <br>
+
+``` bash
+python eval.py \
+        --logtostderr \
+        --checkpoint_dir=path/to/checkpoint_dir \
+        --eval_dir=path/to/eval_dir \
+        --pipeline_config_path=pipeline_config.pbtxt
+```
+<br>
+<br>
+
 # Other Optimisations
 <br>
 If you are running out of memory and this is causing training to fail, there are a number of solutions you can try. <br>

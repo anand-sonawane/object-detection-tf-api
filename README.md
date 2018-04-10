@@ -114,3 +114,15 @@ prefetch_queue_capacity: 2
 
 to your config file in the train_config section. <br>
 For example, placing the two lines between *gradient_clipping_by_norm* and *fine_tune_checkpoint* will work. The number 2 above should only be starting values to get training to begin. The default for those values are 8 and 10 respectively and increasing those values should help speed up training.
+<br>
+
+# Export frozen model
+<br>
+
+For testing the model, you can create a .pb file which will give you a single model to be loaded. This can be done using the below script
+
+``` python
+python export_inference_graph.py --input_type image_tensor --pipeline_config_path ./rfcn_resnet101_coco.config --trained_checkpoint_prefix ./models/train/model.ckpt-5000 --output_directory ./fine_tuned_model
+```
+
+
